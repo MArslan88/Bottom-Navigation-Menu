@@ -7,6 +7,7 @@ import androidx.navigation.NavController;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -24,6 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         getSupportFragmentManager().beginTransaction().replace(R.id.container,firstFragment).commit();
+
+//        // to show the notification badges or notification numbers
+//        BadgeDrawable badgeDrawable = bottomNavigationView.getOrCreateBadge(R.id.secondFragment);
+//        badgeDrawable.setVisible(true);
+//        badgeDrawable.setNumber(5);
+
+        // ---------------------
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
